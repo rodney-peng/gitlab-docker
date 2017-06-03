@@ -8,8 +8,9 @@ echo days=$days
 
 name=192.168.32.11
 
+mkdir ssl
 openssl req -x509 -newkey rsa:4096 -nodes -sha256 -days $days \
-     -config openssl.cnf -batch -keyout $name.key -out $name.crt
+     -config openssl.cnf -batch -keyout ssl/$name.key -out ssl/$name.crt
 
 # show the certificate
-openssl x509 -in $name.crt -text -subject
+openssl x509 -in ssl/$name.crt -text -subject
