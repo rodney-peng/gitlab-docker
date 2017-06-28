@@ -1,6 +1,6 @@
 # run gitlab in docker container before Docker Compose can support user namespace
 
-docker stop gitlab
+docker rm --force gitlab
 docker pull gitlab/gitlab-ce
 
 docker run --detach \
@@ -15,5 +15,4 @@ gitlab/gitlab-ce
 
 sleep 15
 #docker exec gitlab chown root:root /run/sshd
-docker exec gitlab service postfix start
-
+docker exec -it gitlab bash -c "apt update && apt install -y postfix && service postfix start"
