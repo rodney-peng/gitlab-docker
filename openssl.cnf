@@ -126,17 +126,17 @@ string_mask = utf8only
 
 [ req_distinguished_name ]
 countryName			= Country Name (2 letter code)
-countryName_default		= AU
+countryName_default		= TW
 countryName_min			= 2
 countryName_max			= 2
 
 stateOrProvinceName		= State or Province Name (full name)
-stateOrProvinceName_default	= Some-State
+stateOrProvinceName_default	= Taiwan
 
 localityName			= Locality Name (eg, city)
 
 0.organizationName		= Organization Name (eg, company)
-0.organizationName_default	= Internet Widgits Pty Ltd
+0.organizationName_default	= AlphaNetworks
 
 # we can do this but it is not needed normally :-)
 #1.organizationName		= Second Organization Name (eg, company)
@@ -146,6 +146,7 @@ organizationalUnitName		= Organizational Unit Name (eg, section)
 #organizationalUnitName_default	=
 
 commonName			= Common Name (e.g. server FQDN or YOUR name)
+commonName_default              = 5.98.17.201
 commonName_max			= 64
 
 emailAddress			= Email Address
@@ -249,7 +250,7 @@ basicConstraints = CA:true
 
 # Include email address in subject alt name: another PKIX recommendation
 # subjectAltName=email:copy
-subjectAltName=IP:192.168.32.11
+subjectAltName=IP:5.98.17.201
 
 # Copy issuer details
 # issuerAltName=issuer:copy

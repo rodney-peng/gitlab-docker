@@ -6,7 +6,7 @@ days=$((365*5))
 fi
 echo days=$days
 
-name=192.168.32.11
+name=5.98.17.201
 
 mkdir ssl
 openssl req -x509 -newkey rsa:4096 -nodes -sha256 -days $days \
